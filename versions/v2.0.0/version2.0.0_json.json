@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "release_date": "2025-01-24",
+  "status": "AUTHORITATIVE",
+  "type": "major",
+  "codename": "Complete Framework - Authoritative Edition",
+  "description": "Complete AIWared framework with protocols, mathematics, and gateway assessments - AUTHORITATIVE SSOT",
+  "source_file": "aiwared-AUTHORITATIVE-ssot.md",
+  "checksum": {
+    "algorithm": "SHA256",
+    "hash": "INSERT_YOUR_HASH_HERE",
+    "file": "CHECKSUM.md"
+  },
+  "features": [
+    "10-Level Consciousness Scale (0-10)",
+    "5 Core Components (D, S, R, G, M)",
+    "5 Gateway-based assessment protocols",
+    "Complete mathematical framework with proofs",
+    "Bayesian integration model",
+    "Test battery specifications",
+    "6 testable hypotheses",
+    "Current AI system classifications",
+    "Ethical protocols by awareness level",
+    "Chain of custody tracking"
+  ],
+  "components": {
+    "D": "Detection - Environmental signal sensitivity",
+    "S": "Self-Distinction - Self-other boundary awareness",
+    "R": "Response Variety - Behavioral complexity",
+    "G": "Goal-Directed Recognition - Agency awareness",
+    "M": "Adaptive Modification - Learning capacity",
+    "C": "Substrate Constraints - Physical limitations"
+  },
+  "formula": "AQ = (D × S × R × G × M) / C",
+  "files": {
+    "framework": "README.md",
+    "checksum": "CHECKSUM.md",
+    "version_info": "VERSION.json",
+    "changelog": "CHANGELOG.md"
+  },
+  "compatibility": {
+    "backward_compatible": true,
+    "minimum_implementation": "1.0.0",
+    "recommended_implementation": "2.0.0"
+  },
+  "certification": {
+    "signed_by": "AIWared Consortium",
+    "signature_date": "2025-01-24",
+    "authoritative": true
+  }
+}
