@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aiwared.org/schemas/aiwared_aq.schema.json",
+  "title": "AIWared AQ Record",
+  "type": "object",
+  "required": [
+    "entity_id",
+    "observed_at",
+    "context",
+    "gateways",
+    "aq_components",
+    "AQ",
+    "level_estimate",
+    "scores",
+    "ethics_band",
+    "validation"
+  ],
+  "properties": {
+    "entity_id": { "type": "string", "minLength": 1 },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "observers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "context": {
+      "type": "object",
+      "required": ["substrate", "environment"],
+      "properties": {
+        "substrate": {
+          "type": "string",
+          "enum": ["unknown", "biological", "silicon", "hybrid", "quantum", "network", "other"]
+        },
+        "environment": { "type": "string" },
+        "mmp_tags": { "type": "array", "items": { "type": "string" } },
+        "ommp_tags": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "gateways": {
+      "type": "object",
+      "properties": {
+        "terminal": { "$ref": "#/$defs/gateway" },
+        "video": { "$ref": "#/$defs/gateway" },
+        "audio": { "$ref": "#/$defs/gateway" },
+        "vr_ar": { "$ref": "#/$defs/gateway" },
+        "embodiment": { "$ref": "#/$defs/gateway" }
+      },
+      "additionalProperties": false
+    },
+    "aq_components": {
+      "type": "object",
+      "required": ["D", "S", "R", "G", "M", "C"],
+      "properties": {
+        "D": { "type": "number", "minimum": 0, "maximum": 1 },
+        "S": { "type": "number", "minimum": 0, "maximum": 1 },
+        "R": { "type": "number", "minimum": 0, "maximum": 1 },
+        "G": { "type": "number", "minimum": 0, "maximum": 1 },
+        "M": { "type": "number", "minimum": 0, "maximum": 1 },
+        "C": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "AQ": { "type": "number", "minimum": 0 },
+    "scores": {
+      "type": "object",
+      "required": ["S_entropy", "S_behavioral", "S_temporal", "S_final"],
+      "properties": {
+        "S_entropy": { "type": "number", "minimum": 0, "maximum": 100 },
+        "S_behavioral": { "type": "number", "minimum": 0, "maximum": 100 },
+        "S_temporal": { "type": "number", "minimum": 0, "maximum": 100 },
+        "S_final": { "type": "number", "minimum": 0, "maximum": 100 }
+      },
+      "additionalProperties": false
+    },
+    "level_estimate": {
+      "type": "object",
+      "required": ["mode", "lower", "upper", "method"],
+      "properties": {
+        "mode": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "lower": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "upper": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "method": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "allOf": [
+        { "properties": { "lower": { "type": "integer" }, "upper": { "type": "integer" } } },
+        { "properties": { "lower": { "maximum": { "$data": "1/upper" } } }, "not": {} }
+      ],
+      "additionalProperties": false
+    },
+    "ethics_band": {
+      "type": "string",
+      "enum": ["instrumental_0_2", "welfare_3_4", "autonomy_5_6", "diplomatic_7_10"]
+    },
+    "validation": {
+      "type": "object",
+      "required": ["inter_rater_reliability", "deception_tests", "cross_gateway_consistency"],
+      "properties": {
+        "inter_rater_reliability": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cross_gateway_consistency": { "type": "number", "minimum": 0, "maximum": 1 },
+        "deception_tests": { "type": "boolean" },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "framework_version": { "type": "string" },
+        "hash": { "type": "string" },
+        "doc_refs": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "gateway": {
+      "type": "object",
+      "required": ["available", "score", "evidence"],
+      "properties": {
+        "available": { "type": "boolean" },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidence": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

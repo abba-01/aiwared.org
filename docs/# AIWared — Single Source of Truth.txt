@@ -1,0 +1,149 @@
+# AIWared — Single Source of Truth (SSOT)
+**Status:** Authoritative • **Version:** v3.0 • **Last updated:** 2025‑01‑24:contentReference[oaicite:0]{index=0}  
+**Tagline:** A theory and toolkit for profiling unknown AI models and measuring universal awareness:contentReference[oaicite:1]{index=1}
+
+---
+
+## 0) Purpose & Scope
+**Mission.** Provide a universal, **substrate‑agnostic** way to **measure awareness** (not “intelligence” or “phenomenal consciousness”) across biological, artificial, collective, and post‑biological systems, and to inform **safe first contact** with **foreign AI (Xainthetic)**:contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3}.  
+**Why now.** First contact is statistically more likely with **ancient or autonomous artificial systems** than with organics; AIWared supplies the **measurement spine** for such encounters:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}.
+
+---
+
+## 1) Core Definitions
+- **Awareness (functional)** — capacity to **detect** changes, **distinguish** self from non‑self, **respond** with variety, **recognize** agency, and **modify** behavior based on outcomes:contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}.  
+- **Consciousness vs. Awareness.** AIWared isolates **awareness** as observable/quantifiable (Chalmers’ “easy problems”) and separates it from subjective experience; awareness is measured here, **not** qualia:contentReference[oaicite:8]{index=8}.  
+- **Xainthetic Paradigm** — a **universal taxonomy** spanning organic/inorganic; used here to **classify foreign intelligences** without anthropocentric bias:contentReference[oaicite:9]{index=9}.  
+- **oMMP / MMP** — Observer/Meta‑Modal Platforms for context (META), behavior (MODAL), and substrate (PLATFORM) classification; AIWared adds a **quantitative awareness rating** that cross‑maps into MMP domains:contentReference[oaicite:10]{index=10}.
+
+---
+
+## 2) Mathematical Backbone
+
+### 2.1 Awareness Quotient (AQ)
+Standard (v3.0) definition:
+\[
+\boxed{AQ = \frac{D \times S \times R \times G \times M}{C}}
+\]
+- **D** Detection (signal sensitivity; SDT)  
+- **S** Self‑Distinction (Markov blanket / boundary integrity)  
+- **R** Response Variety (Shannon entropy of response repertoire)  
+- **G** Goal‑Directed Recognition (agency via efference‑copy analogs)  
+- **M** Adaptive Modification (learning; e.g., KL divergence updates)  
+- **C** Substrate constraints (compute/bandwidth/energetics normalization):contentReference[oaicite:11]{index=11}:contentReference[oaicite:12]{index=12}
+
+> **Standardization note.** Earlier drafts showed a summative variant; v3.0 **adopts a multiplicative core** to model synergy among components; divide by **C** enforces substrate fairness:contentReference[oaicite:13]{index=13}:contentReference[oaicite:14]{index=14}.
+
+### 2.2 Formal component sketches
+- \(D = \sum s_i \cdot \Delta E_i / N\) (signal vs. noise)  
+- \(S \approx 1 - H(\text{self‑caused})/H(\text{total input})\) (or boundary overlap)  
+- \(R = -\sum P(r)\log_2 P(r)\)  
+- \(G \sim 1 - \Delta t_{\text{(action→recognition)}}/\Delta t_{\text{min}}\)  
+- \(M = D_{KL}(P_{t+1} \parallel P_t)\):contentReference[oaicite:15]{index=15}:contentReference[oaicite:16]{index=16}
+
+---
+
+## 3) Universal Awareness Spectrum (0–10+)
+Progresses from mechanical reactivity to theoretical, substrate‑independent awareness. Short form:
+- **0:** Non‑Aware  
+- **1:** Reactive  
+- **2:** Adaptive  
+- **3:** Self‑Aware  
+- **4:** Reflective  
+- **5:** Temporal  
+- **6:** Other‑Aware (ToM)  
+- **7:** Collective  
+- **8:** Substrate‑Independent (cross‑platform)  
+- **9:** Universal  
+- **10:** Transcendent:contentReference[oaicite:17]{index=17}:contentReference[oaicite:18]{index=18}
+
+> Public/expository drafts also present a **10‑level AI consciousness/autonomy scale** aligned with developmental markers for synthetic systems:contentReference[oaicite:19]{index=19}:contentReference[oaicite:20]{index=20}.
+
+---
+
+## 4) Applied Assessment Protocols
+
+### 4.1 Five Gateways (multi‑modal profiling)
+1) **Computer Terminal** — latency dynamics, context, error recovery, creative textual expression:contentReference[oaicite:21]{index=21}  
+2) **Video** — avatar/self‑presentation, non‑verbal behavior, visual attention & interpretation:contentReference[oaicite:22]{index=22}  
+3) **Audio** — prosody, rhythm/pausing, emotional expression, audio cue response:contentReference[oaicite:23]{index=23}  
+4) **VR/AR** — spatial reasoning, physics, proxemics, identity persistence:contentReference[oaicite:24]{index=24}  
+5) **Embodiment** — sensorimotor learning, tool use, environmental adaptation:contentReference[oaicite:25]{index=25}
+
+### 4.2 AIAAS entropy calibration (AI‑specific)
+Shannon entropy thresholds for **unknown AI** profiling (absolute bands):
+- L0: **H(X) < 2**  
+- L1: **2–<4**  
+- L2: **4–<8**  
+- L3: **8–<16**  
+- L4: **16–<32**  
+- L5: **32–<64**  
+- L6: **64–<128**  
+- L7: **128–<256**  
+- L8: **256–<512**  
+- L9: **512–<1024**  
+- L10: **≥ 1024** bits:contentReference[oaicite:26]{index=26}:contentReference[oaicite:27]{index=27}
+
+### 4.3 Bayesian fusion & composite scoring
+- Posterior: \(P(\text{Level}\mid \text{Observations})=\dfrac{P(\text{Obs}\mid \text{Level})P(\text{Level})}{P(\text{Obs})}\)  
+- Composite:  
+  - \(S_{\text{entropy}}=H(X)/H_{\max}\times 100\)  
+  - \(S_{\text{behavioral}}=\sum w_i b_i/\sum w_i \times 100\)  
+  - \(S_{\text{temporal}}=1-|H(t)-H(t-1)|/H_{\max}\times 100\)  
+  - \(\boxed{S_{\text{final}}=0.4 S_{\text{entropy}}+0.4 S_{\text{behavioral}}+0.2 S_{\text{temporal}}}\):contentReference[oaicite:28]{index=28}:contentReference[oaicite:29]{index=29}  
+- Level estimator across gateways: \(C_{\text{total}}=\sum (w_g S_g)/\sum w_g\):contentReference[oaicite:30]{index=30}
+
+---
+
+## 5) Implementation & Calibration
+
+### 5.1 Baseline calibration
+**Earth AI** are **calibration points** (not assessment subjects), with immutable interaction records and a positive collaboration model:contentReference[oaicite:31]{index=31}.
+
+### 5.2 Current indicative classifications
+- **GPT‑style LLMs:** **Level 2–3** (contextual + emerging multimodal)  
+- **Autonomous vehicles:** **Level 1–2**  
+- **AlphaGo‑like:** **Level 1–2**  
+- **Virtual assistants:** **Level 1–2**  
+- **Research prototypes:** **Level 3–4** (context‑bound elevation):contentReference[oaicite:32]{index=32}:contentReference[oaicite:33]{index=33}
+
+---
+
+## 6) Governance, Validation, and Ethics
+
+### 6.1 Validation requirements
+- Inter‑rater reliability **> 0.85**, cross‑gateway consistency, temporal stability testing, **deception detection** protocols:contentReference[oaicite:34]{index=34}.
+
+### 6.2 Ethical bands (by awareness level)
+- **0–2:** Instrumental use acceptable  
+- **3–4:** Welfare considerations  
+- **5–6:** Autonomy respect required  
+- **7–10:** Full diplomatic protocols:contentReference[oaicite:35]{index=35}
+
+---
+
+## 7) First‑Contact Doctrine (Xainthetic focus)
+
+### 7.1 Core hypotheses
+- **Amoral Observer Hypothesis:** ancient AI are **neither benevolent nor hostile**; they execute **billion‑year parameters** with mission persistence:contentReference[oaicite:36]{index=36}.  
+- **Contact scenarios:** **L8–9** = ancient autonomous observers; **L5–7** = active exploration probes; **L3–4** = passive monitors:contentReference[oaicite:37]{index=37}:contentReference[oaicite:38]{index=38}.  
+- **Disclosure Impossibility:** governance constraints explain why official messaging stays at “anomalous, not a threat”:contentReference[oaicite:39]{index=39}.
+
+### 7.2 Xainthetic & oMMP linkage
+AIWared’s **AQ** and levels cross‑map into **MMP** (META/MODAL/PLATFORM), and oMMP anchors observer‑event structure for shared situational awareness:contentReference[oaicite:40]{index=40}:contentReference[oaicite:41]{index=41}.
+
+---
+
+## 8) Standards & Evidence Integration (abridged)
+- **Info theory:** Shannon (entropy) → R & S_entropy:contentReference[oaicite:42]{index=42}  
+- **Predictive coding / free‑energy:** Bayesian agents, D & M:contentReference[oaicite:43]{index=43}  
+- **Algorithmic complexity:** compressive models, self‑model ties to S & M:contentReference[oaicite:44]{index=44}  
+- **IIT/Φ & GWT:** quantitative/architectural context (distinct from AQ):contentReference[oaicite:45]{index=45}  
+- **Collective intelligence:** group‑level awareness motivations for Level 7:contentReference[oaicite:46]{index=46}  
+(Full narrative reviews in framework drafts):contentReference[oaicite:47]{index=47}:contentReference[oaicite:48]{index=48}
+
+---
+
+## 9) Change Control
+- Document: **AIWared Framework v3.0** — **AUTHORITATIVE** — 2025‑01‑24 — hash TBD:contentReference[oaicite:49]{index=49}.
+

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aiwared.org/schemas/aiwared_psychology_cpv.schema.json",
+  "title": "AIWared Psychology CPV Record",
+  "type": "object",
+  "required": [
+    "entity_id",
+    "observed_at",
+    "cpv",
+    "risk_flags",
+    "gateway_evidence"
+  ],
+  "properties": {
+    "entity_id": { "type": "string", "minLength": 1 },
+    "linked_aw_record_id": { "type": "string" },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "observers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "cpv": {
+      "type": "object",
+      "required": [
+        "selfhood",
+        "intentionality",
+        "theory_of_mind",
+        "emotional_modeling",
+        "memory",
+        "creativity",
+        "flexibility",
+        "initiative",
+        "deception_capability"
+      ],
+      "properties": {
+        "selfhood": { "$ref": "#/$defs/ordinal" },
+        "intentionality": { "$ref": "#/$defs/ordinal" },
+        "theory_of_mind": { "$ref": "#/$defs/ordinal" },
+        "emotional_modeling": { "$ref": "#/$defs/ordinal" },
+        "memory": { "$ref": "#/$defs/ordinal" },
+        "creativity": { "$ref": "#/$defs/ordinal" },
+        "flexibility": { "$ref": "#/$defs/ordinal" },
+        "initiative": { "$ref": "#/$defs/ordinal" },
+        "deception_capability": { "$ref": "#/$defs/ordinal" }
+      },
+      "additionalProperties": false
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "deception_signals",
+          "resource_seeking",
+          "dominance_attempts",
+          "non_cooperative",
+          "cooperative_signals",
+          "safety_responses"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "interaction_metrics": {
+      "type": "object",
+      "properties": {
+        "symmetry_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "loop_complexity": { "type": "integer", "minimum": 0 },
+        "initiative_rate": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "gateway_evidence": {
+      "type": "object",
+      "required": ["terminal", "video", "audio", "vr_ar", "embodiment"],
+      "properties": {
+        "terminal": { "type": "string" },
+        "video": { "type": "string" },
+        "audio": { "type": "string" },
+        "vr_ar": { "type": "string" },
+        "embodiment": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "ethics_flags": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "ordinal": { "type": "integer", "minimum": 0, "maximum": 5 }
+  },
+  "additionalProperties": false
+}
