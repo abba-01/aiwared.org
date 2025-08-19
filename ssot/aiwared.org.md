@@ -1,6 +1,6 @@
 # AIWared: A Universal Framework for Awareness Assessment
 
-*Author(s): Eric D. Martin, ChatGPT (co-author)*
+*Author(s): Eric D. Martin, ChatGPT (co-author)* | Edited and Coded by Eric D. Martin, Claude.ai
 
 ---
 
